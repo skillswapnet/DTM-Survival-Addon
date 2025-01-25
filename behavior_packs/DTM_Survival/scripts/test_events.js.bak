@@ -1,0 +1,17 @@
+import { world } from '@minecraft/server';
+
+console.log("Available properties and methods in 'world':");
+
+for (const property in world) {
+    console.log(`Property: ${property} - Type: ${typeof world[property]}`);
+}
+
+console.log("Available events in 'world.events':");
+
+if (world.events) {
+    for (const event in world.events) {
+        console.log(`Event: ${event}`);
+    }
+} else {
+    console.log("No events available in 'world.events'");
+}

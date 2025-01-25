@@ -1,0 +1,47 @@
+import { world, system, Player } from '@minecraft/server';
+import { ModalFormData } from '@minecraft/server-ui';
+
+system.run(() => {
+    console.log("Testing @minecraft/server and @minecraft/server-ui");
+
+    // Log world properties and methods
+    console.log("World properties and methods:");
+    for (const prop in world) {
+        console.log(`${prop}: ${typeof world[prop]}`);
+    }
+
+    // Log system properties and methods
+    console.log("System properties and methods:");
+    for (const prop in system) {
+        console.log(`${prop}: ${typeof system[prop]}`);
+    }
+
+    // Log Player properties and methods
+    console.log("Player properties and methods:");
+    for (const prop in Player.prototype) {
+        console.log(`${prop}: ${typeof Player.prototype[prop]}`);
+    }
+
+    // Log ModalFormData properties and methods
+    console.log("ModalFormData properties and methods:");
+    for (const prop in ModalFormData.prototype) {
+        console.log(`${prop}: ${typeof ModalFormData.prototype[prop]}`);
+    }
+
+    // Test creating and showing a modal form
+    const testPlayer = world.getPlayers()[0];
+    if (testPlayer) {
+        const testForm = new ModalFormData()
+            .title("Test Form")
+            .textField("This is a test form.", "Enter text here")
+            .toggle("Accept", false);
+
+        testForm.show(testPlayer).then((response) => {
+            console.log("Form response:", response);
+        }).catch((error) => {
+            console.error("Error showing form:", error);
+        });
+    } else {
+        console.log("No players found to test the form.");
+    }
+});
