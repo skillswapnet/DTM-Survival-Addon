@@ -1,0 +1,10 @@
+{
+  "texture_data": {
+    "dtm:survival": {
+      "textures": "textures/items/survival_tool"
+    },
+    "dtm:admin_tool": {
+      "textures": "textures/items/admin_tool"
+    }
+  }
+}

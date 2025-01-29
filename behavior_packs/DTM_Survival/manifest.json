@@ -4,36 +4,20 @@
     "description": "A collection of mods from addons for survival",
     "name": "DTM Survival",
     "uuid": "a05b5af2-5440-4519-a0d5-6a383ea4b772",
-    "version": [
-      0,
-      0,
-      1
-    ],
-    "min_engine_version": [
-      1,
-      17,
-      0
-    ]
+    "version": [ 1, 0, 0 ],
+    "min_engine_version": [ 1, 17, 0 ]
   },
   "modules": [
     {
-      "description": "by Zorrocraft",
+      "description": "by Psychlone",
       "type": "data",
       "uuid": "d7df6880-be28-47cc-8121-b473ed7447b7",
-      "version": [
-        0,
-        0,
-        1
-      ]
+      "version": [ 1, 0, 0 ]
     },
     {
       "type": "script",
       "uuid": "669ac9cc-4d3a-424f-999f-39727d6a382d",
-      "version": [
-        0,
-        0,
-        1
-      ],
+      "version": [ 1, 0, 0 ],
       "entry": "scripts/main.js",
       "language": "javascript"
     }

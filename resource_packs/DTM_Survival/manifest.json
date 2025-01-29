@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "An addon I customized for myself.",
+    "name": "DTM Survival",
+    "uuid": "d2b7c5e2-3c4b-4d3a-8a5e-1f2b3c4d5e6f",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "description": "An addon I customized for myself.",
+      "type": "resources",
+      "uuid": "f3a8b7c6-4d5e-4f7a-8b9c-0d1e2f3a4b5c",
+      "version": [1, 0, 0]
+    }
+  ]
+}

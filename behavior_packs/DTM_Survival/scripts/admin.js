@@ -150,7 +150,7 @@ function showFreezePlayerForm(player) {
 
 world.afterEvents.itemUse.subscribe((event) => {
     const { source, itemStack } = event;
-    if (source && itemStack.typeId === "zc:admin_tool") {
+    if (source && itemStack.typeId === "dtm:admin_tool") {
         if (source.hasTag("moderator")) {
             showAdminMenu(source);
         } else {

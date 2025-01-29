@@ -1,0 +1,80 @@
+<NetworkMap>
+    <Device>
+        <Name>Internet Gateway</Name>
+        <Type>Gateway</Type>
+        <IPAddress>136.239.93.129</IPAddress>
+        <WANIPAddress>136.239.93.194</WANIPAddress>
+        <Purpose>Provides internet access to the network</Purpose>
+    </Device>
+    <Device>
+        <Name>Router</Name>
+        <Type>Router</Type>
+        <IPAddress>192.168.0.1</IPAddress>
+        <OperatingSystem>pfsense 2.7.2-RELEASE (amd64)</OperatingSystem>
+        <Purpose>Routes network traffic between the gateway and internal network devices</Purpose>
+        <ConnectedDevices>
+            <Device>
+                <Name>Switch</Name>
+                <Type>Switch (Unmanaged)</Type>
+                <Purpose>Distributes network connections to multiple devices</Purpose>
+                <ConnectedDevices>
+                    <Device>
+                        <Name>Wireless Access Point</Name>
+                        <Type>Access Point</Type>
+                        <IPAddress>192.168.0.2</IPAddress>
+                        <Purpose>Provides wireless network access to devices</Purpose>
+                    </Device>
+                    <Device>
+                        <Name>Proxmox PVE1</Name>
+                        <Type>Server</Type>
+                        <IPAddress>[192.168.0.52]</IPAddress>
+                        <MACAddress>[f0:92:1c:f2:fe:5f]</MACAddress>
+                        <OperatingSystem>Proxmox VE 6.8.12-4-pve</OperatingSystem>
+                        <Purpose>Hosts virtual machines and containers</Purpose>
+                        <Contains>
+                            <Device>
+                                <Name>Jellyfin</Name>
+								<ID>100</ID>
+                                <IPAddress>[192.168.0.53]</IPAddress>
+                                <MACAddress>[BC:24:11:04:18:08]</MACAddress>
+                                <OperatingSystem>[Debian GNU/Linux 12 (bookworm)]</OperatingSystem>
+                                <Purpose>[Media Server]</Purpose>
+                            </Device>
+                            <Device>
+                                <Name>Fileserv</Name>
+								<ID>101</ID>
+                                <IPAddress>[192.168.0.54]</IPAddress>
+                                <MACAddress>[BC:24:11:54:85:81]</MACAddress>
+                                <OperatingSystem>[Debian GNU/Linux 12 (bookworm)]</OperatingSystem>
+                                <Purpose>[Provides ability to upload files to media server]</Purpose>
+                            </Device>
+                            <Device>
+                                <Name>VM1</Name>
+                                <IPAddress>[IP address of VM1]</IPAddress>
+                                <MACAddress>[MAC address of VM1]</MACAddress>
+                                <OperatingSystem>[Operating system of VM1]</OperatingSystem>
+                                <Purpose>[Purpose of VM1]</Purpose>
+                            </Device>
+                        </Contains>
+                    </Device>
+                    <Device>
+                        <Name>Proxmox PVE2</Name>
+                        <Type>Server</Type>
+                        <IPAddress>[IP address of PVE2]</IPAddress>
+                        <MACAddress>[MAC address of PVE2]</MACAddress>
+                        <OperatingSystem>Proxmox VE</OperatingSystem>
+                        <Purpose>Hosts virtual machines and containers</Purpose>
+                    </Device>
+                    <Device>
+                        <Name>Tyler Computer</Name>
+                        <Type>Computer</Type>
+                        <IPAddress>[IP address of Tyler Computer]</IPAddress>
+                        <MACAddress>[MAC address of Tyler Computer]</MACAddress>
+                        <OperatingSystem>[Operating system of Tyler Computer]</OperatingSystem>
+                        <Purpose>Personal computer for general use</Purpose>
+                    </Device>
+                </ConnectedDevices>
+            </Device>
+        </ConnectedDevices>
+    </Device>
+</NetworkMap>
